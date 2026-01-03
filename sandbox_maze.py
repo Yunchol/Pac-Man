@@ -2,7 +2,8 @@
 
 from mazegenerator.mazegenerator import MazeGenerator
 
-gen = MazeGenerator(seed=42)
-maze = gen.generate()
+gen = MazeGenerator(size=(10, 10), perfect=False, seed=42)
+gen.generate()
 
-print(maze)
+for row in gen.maze:
+    print(row)
